@@ -186,7 +186,7 @@ try {
 			$koboUrl = $script:op7PlantingURL.Replace("JSON_QUERY", $queryJson)
 
 			#Write-Host "Query Json [$queryJson]" 
-			#Write-Host "Kobo URL [$koboUrl]" 
+			Write-Host "Kobo URL [$koboUrl]" 
 
 			Write-Progress -Id 20 -Activity "Downloading..." "Raw data for [$currDateStr] " -PercentComplete -1
 			$response = Invoke-RestMethod -Uri $koboUrl -Method Get -Headers $script:headers 

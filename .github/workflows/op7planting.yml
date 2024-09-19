@@ -6,10 +6,17 @@ on:
 jobs:
   run-script:
     runs-on: windows-latest  # Use Windows for PowerShell
-
+    environment: hari_personal
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Print environment variables
+        run: |
+          echo "KOBO_TOKEN: $KOBO_TOKEN"
+          echo "ASSET_ID_OP7PLANT_MONITORING: $ASSET_ID_OP7PLANT_MONITORING"
+          echo "KOBO_URL_BASE: $KOBO_URL_BASE"
 
       - name: Run PowerShell script
         env:

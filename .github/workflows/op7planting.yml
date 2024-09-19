@@ -16,7 +16,7 @@ jobs:
           pwsh -File get_op7planting_data.ps1
 
       - name: Upload log file
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: log-file
           path: OP7PlantingData\OP7Planting_log.txt  # Adjust if necessary

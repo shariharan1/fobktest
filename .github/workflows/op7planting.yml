@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run PowerShell script
-       env:
+        env:
           KOBO_TOKEN: ${{ secrets.KOBO_TOKEN }}
           ASSET_ID_OP7PLANT_MONITORING: ${{ secrets.ASSET_ID_OP7PLANT_MONITORING }}
           KOBO_URL_BASE: ${{ secrets.KOBO_URL_BASE }}

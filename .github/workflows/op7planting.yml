@@ -1,12 +1,7 @@
 name: Run PowerShell Script
 
 on: 
-  push:
-    branches:
-      - main  # Change to your branch name if needed
-  pull_request:
-    branches:
-      - main  # Change to your branch name if needed
+  workflow_dispatch:  # Allow manual triggers
 
 jobs:
   run-script:

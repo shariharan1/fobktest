@@ -1,0 +1,27 @@
+name: Run PowerShell Script
+
+on: 
+  push:
+    branches:
+      - main  # Change to your branch name if needed
+  pull_request:
+    branches:
+      - main  # Change to your branch name if needed
+
+jobs:
+  run-script:
+    runs-on: windows-latest  # Use Windows for PowerShell
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run PowerShell script
+        run: |
+          pwsh -File get_op7planting_data.ps1
+
+      - name: Upload log file
+        uses: actions/upload-artifact@v2
+        with:
+          name: log-file
+          path: OP7PlantingData\OP7Planting_log.txt  # Adjust if necessary

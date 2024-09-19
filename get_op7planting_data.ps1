@@ -454,7 +454,7 @@ try {
 
 	Write-Host "Processing for Month [$month] Year [$year] Photos [$downloadPhotos]"
 
-	#start-main
+	start-main
 
 	Write-Host "Processing for Month [$month] Year [$year] Photos [$downloadPhotos] - COMPLETED!" 
 

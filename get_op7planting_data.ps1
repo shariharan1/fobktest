@@ -419,8 +419,8 @@ try {
 
 	}
 
-	# $currDate = (Get-Date).AddMonths(-1)  # added for testing
-    $currDate = Get-Date
+	$currDate = (Get-Date).AddMonths(-1)  # added for testing
+    #$currDate = Get-Date
 
     Write-Host
     Write-Host $winTitle
